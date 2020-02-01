@@ -11,7 +11,7 @@ def exec_cmd(cmd):
 def get_cmd_stdout(cmd):
     tokens = shlex.split(cmd)
     tokens = subprocess.run(tokens, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    return tokens.stdout.decode("utf8")
+    return tokens.stdout.decode("utf8").replace('\n','')
 
 
 # login to ecr
