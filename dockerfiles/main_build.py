@@ -22,11 +22,11 @@ REPO_WEB = get_cmd_stdout(REPO_WEB)
 
 if __name__ == "__main__":
     # build flask,uwsgi and python that is Dockerfile
-    build_app = 'docker build -t {}:latest ./app/'.format(REPO_APP)
+    build_app = 'docker build -t {}:latest ./dockerfiles/app/'.format(REPO_APP)
     exec_cmd(build_app)
 
     # nginx that is Dockerfile
-    build_web = 'docker build -t {}:latest ./nginx/'.format(REPO_WEB)
+    build_web = 'docker build -t {}:latest ./dockerfiles/nginx/'.format(REPO_WEB)
     exec_cmd(build_web)
 
     # pushing image to ecr
