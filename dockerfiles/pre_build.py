@@ -15,9 +15,9 @@ def get_cmd_stdout(cmd):
 
 
 # login to ecr
-LOGIN_TO_ECR = 'aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email'
-print(LOGIN_TO_ECR)
-# LOGIN_TO_ECR = 'aws ecr get-login --no-include-email --region ap-northeast-1'
+#LOGIN_TO_ECR = 'aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email'
+#print(LOGIN_TO_ECR)
+LOGIN_TO_ECR = 'aws ecr get-login --no-include-email --region ap-northeast-1'
 LOGIN_TO_ECR = get_cmd_stdout(LOGIN_TO_ECR)
 exec_cmd(LOGIN_TO_ECR)
 
